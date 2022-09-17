@@ -1,0 +1,599 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+mixed-port: 7893
+allow-lan: false
+mode: Rule
+log-level: info
+hosts:
+  services.googleapis.cn: 216.58.200.67
+  www.google.cn: 216.58.200.67
+external-controller: 0.0.0.0:9090
+clash-for-android:
+  append-system-dns: false
+profile:
+  tracing: true
+dns:
+  enable: true
+  listen: 127.0.0.1:8853
+  default-nameserver:
+    - 114.114.114.114
+    - 223.5.5.5
+    - 1.1.1.1
+    - '[2402:4e00::]:53'
+    - '[2400:3200::1]:53'
+  ipv6: true
+  enhanced-mode: fake-ip
+  fake-ip-filter:
+    - "*.lan"
+    - stun.*.*.*
+    - stun.*.*
+    - time.windows.com
+    - time.nist.gov
+    - time.apple.com
+    - time.asia.apple.com
+    - "*.ntp.org.cn"
+    - "*.openwrt.pool.ntp.org"
+    - time1.cloud.tencent.com
+    - time.ustc.edu.cn
+    - pool.ntp.org
+    - ntp.ubuntu.com
+    - ntp.aliyun.com
+    - ntp1.aliyun.com
+    - ntp2.aliyun.com
+    - ntp3.aliyun.com
+    - ntp4.aliyun.com
+    - ntp5.aliyun.com
+    - ntp6.aliyun.com
+    - ntp7.aliyun.com
+    - time1.aliyun.com
+    - time2.aliyun.com
+    - time3.aliyun.com
+    - time4.aliyun.com
+    - time5.aliyun.com
+    - time6.aliyun.com
+    - time7.aliyun.com
+    - "*.time.edu.cn"
+    - time1.apple.com
+    - time2.apple.com
+    - time3.apple.com
+    - time4.apple.com
+    - time5.apple.com
+    - time6.apple.com
+    - time7.apple.com
+    - time1.google.com
+    - time2.google.com
+    - time3.google.com
+    - time4.google.com
+    - music.163.com
+    - "*.music.163.com"
+    - "*.126.net"
+    - musicapi.taihe.com
+    - music.taihe.com
+    - songsearch.kugou.com
+    - trackercdn.kugou.com
+    - "*.kuwo.cn"
+    - api-jooxtt.sanook.com
+    - api.joox.com
+    - joox.com
+    - y.qq.com
+    - "*.y.qq.com"
+    - streamoc.music.tc.qq.com
+    - mobileoc.music.tc.qq.com
+    - isure.stream.qqmusic.qq.com
+    - dl.stream.qqmusic.qq.com
+    - aqqmusic.tc.qq.com
+    - amobile.music.tc.qq.com
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - music.migu.cn
+    - "*.msftconnecttest.com"
+    - "*.msftncsi.com"
+    - localhost.ptlogin2.qq.com
+    - "*.*.*.srv.nintendo.net"
+    - "*.*.stun.playstation.net"
+    - xbox.*.*.microsoft.com
+    - "*.ipv6.microsoft.com"
+    - "*.*.xboxlive.com"
+    - speedtest.cros.wr.pvp.net
+    - 
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://dns.pub/dns-query  
+
+  fallback:
+    - https://1.1.1.1/dns-query
+    - tls://8.8.4.4
+  fallback-filter:
+    geoip: true
+    geoip-code: CN
+    ipcidr:
+      - 240.0.0.0/4
+      - 0.0.0.0/32
+      - 127.0.0.1/32
+    domain:
+      - +.google.com
+      - +.facebook.com
+      - +.twitter.com
+      - +.youtube.com
+      - +.xn--ngstr-lra8j.com
+      - +.google.cn
+      - +.googleapis.cn
+      - +.googleapis.com
+      - +.gvt1.com
+      - +.github.com
+
+proxies:
+
+p: &p
+  type: http
+  interval: 86400
+  health-check:
+    enable: true
+    url: http://www.gstatic.com/generate_204
+    timeout: 2
+    interval: 600
+
+c: &c
+  type: http
+  behavior: classical
+  interval: 86400
+
+pr: &pr
+  type: select
+  proxies:
+    - 🇭🇰 香港
+    - 🇨🇳 台湾
+    - 🇯🇵 日本
+    - 🇸🇬 新加坡
+    - 🇺🇸 美国
+    - 🇹🇷 土耳其
+    - 低倍率
+    - 按摩院
+    - 花云
+    - YTOO
+    - TAG    
+    - Cord云    
+    - DIRECT
+
+proxy-providers:
+
+  花云: &FC
+    <<: *p
+    url: "https://api.huacloud.xyz/sub?target=clash&insert=true&emoji=true&udp=true&clash.doh=true&new_name=true&filename=Flower_SS&url=https%3A%2F%2Fapi.flowercloud.xyz%2Fosubscribe.php%3Fsid%3D7049%26token%3D8EvC46FZA6A8%26sip002%3D1"
+    path: ./proxy_providers/FlowerCloud.yaml
+    filter: 'IEPL'
+
+  TAG: &Tag
+    <<: *p
+    url: "https://support.tagsssubscribe.com/api/v1/client/subscribe?token=fe30fc0466cc955d98455d16a1d066bf&flag=clash"
+    path: ./proxy_providers/TAG.yaml
+
+  YTOO: &YToo
+    <<: *p
+    url: "https://api.stentvessel.top/sub?target=clash&config=https%3A%2F%2Fsubweb.s3.fr-par.scw.cloud%2FRemoteConfig%2Fcustomized%2Fytoo.ini&clash.doh=true&emoji=true&scv=true&udp=true&new_name=true&filename=YToo_Trojan&url=https%3A%2F%2Fapi.ytoo.xyz%2Fosubscribe.php%3Fsid%3D8756%26token%3D7uRMTrh0uqNN"
+    path: ./proxy_providers/YTOO.yaml
+    filter: '专线'
+
+  Amy: &Amy
+    <<: *p
+    url: "https://api.nxtlnodes.com/Subscription/Clash?sid=28474&token=4Myg8xF0hEy"
+    path: ./proxy_providers/AmyTelecom.yaml
+
+  CordC: &Coc
+    <<: *p
+    url: "https://www.ccsub.online/link/iWxAfTcA4crzJGig?clash=1"
+    path: ./proxy_providers/CordCloud.yaml
+
+#香港分组
+  🇭🇰花云:
+    <<: *FC
+    filter: "港|香港|hk|HK|hongkong|HongKong"
+
+  🇭🇰TAG:
+    <<: *Tag
+    filter: "港|香港|hk|HK|hongkong|HongKong"
+
+  🇭🇰YTOO:
+    <<: *YToo
+    filter: "港|香港|hk|HK|hongkong|HongKong"
+
+  🇭🇰Amy:
+    <<: *Amy
+    filter: "港|香港|hk|HK|hongkong|HongKong"
+
+#台湾分组
+  🇨🇳花云:
+    <<: *FC
+    filter: "台|台湾|tw|TW|taiwan|Taiwan"
+
+  🇨🇳TAG:
+    <<: *Tag
+    filter: "台|台湾|tw|TW|taiwan|Taiwan"
+  
+  🇨🇳YTOO:
+    <<: *YToo
+    filter: "台|台湾|tw|TW|taiwan|Taiwan"
+
+  🇨🇳Amy:
+    <<: *Amy
+    filter: "台|台湾|tw|TW|taiwan|Taiwan"
+
+#日本分组
+  🇯🇵花云:
+    <<: *FC
+    filter: "日|日本|jp|JP|japan|Japan"
+
+  🇯🇵TAG:
+    <<: *Tag
+    filter: "日|日本|jp|JP|japan|Japan"
+    
+  🇯🇵YTOO:
+    <<: *YToo
+    filter: "日|日本|jp|JP|japan|Japan"
+  
+  🇯🇵Amy:
+    <<: *Amy
+    filter: "日|日本|jp|JP|japan|Japan"
+ 
+#新加坡分组
+  🇸🇬花云:
+    <<: *FC
+    filter: "新|新加坡|狮城|sg|SG|singapore"
+
+  🇸🇬TAG:
+    <<: *Tag
+    filter: "新|新加坡|狮城|sg|SG|singapore"
+
+  🇸🇬YTOO:
+    <<: *YToo
+    filter: "新|新加坡|狮城|sg|SG|singapore"
+  
+  🇸🇬Amy:
+    <<: *Amy
+    filter: "新|新加坡|狮城|sg|SG|singapore"
+
+#美国分组
+  🇺🇸花云:
+    <<: *FC
+    filter: "美|美国|us|US|UnitedStates"
+
+  🇺🇸TAG:
+    <<: *Tag
+    filter: "美|美国|us|US|UnitedStates"
+    
+  🇺🇸YTOO:
+    <<: *YToo
+    filter: "美|美国|us|US|UnitedStates"
+  
+  🇺🇸Amy:
+    <<: *Amy
+    filter: "美|美国|us|US|UnitedStates"
+
+#土耳其分组
+  🇹🇷花云:
+    <<: *FC
+    filter: "土耳其|TR"
+
+  🇹🇷TAG:
+    <<: *Tag
+    filter: "土耳其|TR"
+    
+  🇹🇷YTOO:
+    <<: *YToo
+    filter: "土耳其|TR"
+
+#YouTube分组
+  YouTube_Coc:
+    <<: *Coc
+    filter: "上海联通转日本NTT|广州移动转香港NTT|湖南联通转日本|长沙联通转日本"
+
+#TAG Emby
+  TAG_Emby:
+    <<: *Tag
+    filter: "香港 13|香港 14|日本 01|日本 02|日本 03|日本 04|日本 05|日本 06|日本 07|日本 08|日本 09|日本10|日本 11|台湾 14|台湾 15|台湾 16|俄罗斯-莫斯科|美国-硅谷"
+
+#低倍率分组
+  FC_Emby:
+    <<: *FC
+    filter: "实验性"
+
+  YTOO_Emby:  
+    <<: *YToo
+    filter: "日用|标准" 
+
+
+proxy-groups:
+  - name: 🌐Clash
+    <<: *pr
+
+  - name: 🔍TestFlight
+    <<: *pr
+
+  - name: 📱Telegram
+    <<: *pr
+
+  - name: 📟GoogleFCM
+    <<: *pr
+    
+  - name: 🌐Google
+    <<: *pr   
+
+  - name: 🪟Microsoft
+    <<: *pr
+
+  - name: 🎬YouTube
+    type: select
+    use:
+      - YouTube_Coc
+    proxies:
+      - 低倍率
+
+  - name: 🎬Bilibili
+    <<: *pr
+
+  - name: 🎬Emby
+    type: select
+    use:
+      - TAG_Emby
+      - FC_Emby
+      - YTOO_Emby
+
+  - name: ❌BanAD
+    type: select
+    proxies:
+      - REJECT
+      - DIRECT
+
+  - name: 💻Final
+    <<: *pr
+
+#分隔，下面是地区分组
+
+  - name: 🇭🇰 香港
+    type: select
+    use:
+      - 🇭🇰Amy
+      - 🇭🇰花云
+      - 🇭🇰YTOO
+      - 🇭🇰TAG
+       
+
+  - name: 🇨🇳 台湾
+    type: select
+    use:
+      - 🇨🇳Amy
+      - 🇨🇳花云
+      - 🇨🇳YTOO
+      - 🇨🇳TAG
+      
+
+  - name: 🇯🇵 日本
+    type: select
+    use:
+      - 🇯🇵Amy
+      - 🇯🇵花云
+      - 🇯🇵YTOO
+      - 🇯🇵TAG
+      
+
+  - name: 🇸🇬 新加坡
+    type: select
+    use:
+      - 🇸🇬Amy
+      - 🇸🇬花云
+      - 🇸🇬YTOO
+      - 🇸🇬TAG
+      
+
+  - name: 🇺🇸 美国
+    type: select
+    use:
+      - 🇺🇸Amy
+      - 🇺🇸花云
+      - 🇺🇸YTOO
+      - 🇺🇸TAG
+
+  - name: 🇹🇷 土耳其
+    type: select
+    use:
+      - 🇹🇷花云
+      - 🇹🇷YTOO
+      - 🇹🇷TAG      
+
+  - name: 低倍率
+    type: select
+    use:
+      - FC_Emby
+      - YTOO_Emby
+
+  - name: 按摩院
+    type: select
+    use:
+      - Amy
+
+  - name: 花云
+    type: select
+    use:
+      - 花云
+
+  - name: TAG
+    type: select
+    use:
+      - TAG
+
+  - name: YTOO
+    type: select
+    use:
+      - YTOO
+
+  - name: Cord云
+    type: select
+    use:
+      - CordC
+
+
+rule-providers:
+
+  TestFlight:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml"
+    path: ./rule_providers/TestFlight.yaml
+    
+  Emby:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml"
+    path: ./rule_providers/Emby.yaml
+
+  YouTube:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.yaml"
+    path: ./rule_providers/YouTube.yaml
+
+  Bilibili:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/BiliBili/BiliBili.yaml"
+    path: ./rule_providers/Bilibili.yaml
+
+  Telegram:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
+    path: ./rule_providers/Telegram.yaml
+
+  GoogleFCM:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/GoogleFCM/GoogleFCM.yaml"
+    path: ./rule_providers/GoogleFCM.yaml
+
+  Google:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Google/Google.yaml"
+    path: ./rule_providers/Google.yaml
+
+  Microsoft:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
+    path: ./rule_providers/Microsoft.yaml
+
+  ChinaMax_Domain:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax_Domain.yaml"
+    path: ./rule_providers/ChinaMax_Domain.yaml
+    interval: 86400
+
+  ChinaMax:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml"
+    path: ./rule_providers/ChinaMax.yaml
+
+  Global:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
+    path: ./rule_providers/Global.yaml
+
+  Global_Domain:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml"
+    path: ./rule_providers/Global_Domain.yaml
+    interval: 86400
+
+  Privacy:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy.yaml"    
+    path: ./rule_providers/Privacy.yaml
+
+  Privacy_Domain:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Privacy/Privacy_Domain.yaml"
+    path: ./rule_providers/Privacy_Domain.yaml
+    interval: 86400
+
+  Hijacking:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Hijacking/Hijacking.yaml"    
+    path: ./rule_providers/Hijacking.yaml
+
+  AdvertisingLite:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite.yaml"    
+    path: ./rule_providers/AdvertisingLite.yaml
+
+  AdvertisingLite_Domain:
+    type: http
+    behavior: domain
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/AdvertisingLite/AdvertisingLite_Domain.yaml"
+    path: ./rule_providers/AdvertisingLite_Domain.yaml
+    interval: 86400  
+
+
+rules:
+  - RULE-SET,Privacy,❌BanAD
+  - RULE-SET,Privacy_Domain,❌BanAD
+  - RULE-SET,Hijacking,❌BanAD
+  - RULE-SET,AdvertisingLite,❌BanAD
+  - RULE-SET,AdvertisingLite_Domain,❌BanAD
+  - PROCESS-NAME,com.google.android.apps.googlevoice,🇺🇸 美国
+  - PROCESS-NAME,org.telegram.messenger,📱Telegram
+  - PROCESS-NAME,Telegram.exe,📱Telegram
+  - PROCESS-NAME,Thunder,DIRECT
+  - PROCESS-NAME,DownloadService,DIRECT
+  - PROCESS-NAME,qBittorrent,DIRECT
+  - PROCESS-NAME,Transmission,DIRECT
+  - PROCESS-NAME,fdm,DIRECT
+  - PROCESS-NAME,aria2c,DIRECT
+  - PROCESS-NAME,Folx,DIRECT
+  - PROCESS-NAME,NetTransport,DIRECT
+  - PROCESS-NAME,uTorrent,DIRECT
+  - PROCESS-NAME,WebTorrent,DIRECT
+  - PROCESS-NAME,aria2c.exe,DIRECT
+  - PROCESS-NAME,BitComet.exe,DIRECT
+  - PROCESS-NAME,fdm.exe,DIRECT
+  - PROCESS-NAME,NetTransport.exe,DIRECT
+  - PROCESS-NAME,qbittorrent.exe,DIRECT
+  - PROCESS-NAME,Thunder.exe,DIRECT
+  - PROCESS-NAME,ThunderVIP.exe,DIRECT
+  - PROCESS-NAME,transmission-daemon.exe,DIRECT
+  - PROCESS-NAME,transmission-qt.exe,DIRECT
+  - PROCESS-NAME,uTorrent.exe,DIRECT
+  - PROCESS-NAME,WebTorrent.exe,DIRECT
+  - DOMAIN,clash.razord.top,DIRECT
+  - DOMAIN,yacd.haishan.me,DIRECT
+  - DOMAIN,vod0393-aliyun18-vip-lixian.mypikpak.com,DIRECT
+  - DOMAIN,vod0394-aliyun18-vip-lixian.mypikpak.com,DIRECT
+  - DOMAIN,vod0395-aliyun18-vip-lixian.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0393.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0394.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0395.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0480.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0481.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0482.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0483.mypikpak.com,DIRECT
+  - DOMAIN,dl-a10b-0484.mypikpak.com,DIRECT
+  - DOMAIN-SUFFIX,mypikpak.com,🌐Clash
+  - DOMAIN-SUFFIX,mypikpak.net,🌐Clash
+  - RULE-SET,TestFlight,🔍TestFlight
+  - RULE-SET,GoogleFCM,📟GoogleFCM
+  - RULE-SET,Emby,🎬Emby
+  - RULE-SET,YouTube,🎬YouTube,
+  - RULE-SET,Bilibili,🎬Bilibili
+  - RULE-SET,Telegram,📱Telegram
+  - RULE-SET,Google,🌐Google
+  - RULE-SET,Microsoft,🪟Microsoft
+  - RULE-SET,ChinaMax,DIRECT
+  - RULE-SET,ChinaMax_Domain,DIRECT
+  - RULE-SET,Global,🌐Clash
+  - RULE-SET,Global_Domain,🌐Clash
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-reolvse
+  - MATCH,💻Final
