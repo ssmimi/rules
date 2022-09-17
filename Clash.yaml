@@ -306,11 +306,17 @@ proxy-providers:
 proxy-groups:
   - name: 🌐Clash
     <<: *pr
+    
+  - name: 🍎☁️iCloud
+    <<: *pr
 
   - name: 🔍TestFlight
     <<: *pr
 
   - name: 📱Telegram
+    <<: *pr
+    
+  - name: 📱Twitter
     <<: *pr
 
   - name: 📟GoogleFCM
@@ -344,7 +350,7 @@ proxy-groups:
     proxies:
       - REJECT
       - DIRECT
-
+      
   - name: 💻Final
     <<: *pr
 
@@ -440,6 +446,11 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/TestFlight/TestFlight.yaml"
     path: ./rule_providers/TestFlight.yaml
     
+  iCloud:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/iCloud/iCloud.yaml"
+    path: ./rule_providers/iCloud.yaml    
+    
   Emby:
     <<: *c
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Emby/Emby.yaml"
@@ -459,6 +470,16 @@ rule-providers:
     <<: *c
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Telegram/Telegram.yaml"
     path: ./rule_providers/Telegram.yaml
+    
+  Facebook:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Facebook/Facebook.yaml"
+    path: ./rule_providers/Facebook.yaml
+    
+  Twitter:
+    <<: *c
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Twitter/Twitter.yaml"
+    path: ./rule_providers/Twitter.yaml
 
   GoogleFCM:
     <<: *c
@@ -473,7 +494,7 @@ rule-providers:
   Microsoft:
     <<: *c
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.yaml"
-    path: ./rule_providers/Microsoft.yaml
+    path: ./rule_providers/Microsoft.yaml  
 
   ChinaMax_Domain:
     type: http
@@ -486,18 +507,11 @@ rule-providers:
     <<: *c
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml"
     path: ./rule_providers/ChinaMax.yaml
-
-  Global:
+    
+  ChinaIP:
     <<: *c
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global.yaml"
-    path: ./rule_providers/Global.yaml
-
-  Global_Domain:
-    type: http
-    behavior: domain
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Global/Global_Domain.yaml"
-    path: ./rule_providers/Global_Domain.yaml
-    interval: 86400
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ssmimi/rules/main/Stash/China/ChinaIP.yaml"
+    path: ./rule_providers/ChinaIP.yaml    
 
   Privacy:
     <<: *c
@@ -538,6 +552,7 @@ rules:
   - PROCESS-NAME,com.google.android.apps.googlevoice,🇺🇸 美国
   - PROCESS-NAME,org.telegram.messenger,📱Telegram
   - PROCESS-NAME,Telegram.exe,📱Telegram
+  - PROCESS-NAME,com.twitter.android,📱Twitter
   - PROCESS-NAME,Thunder,DIRECT
   - PROCESS-NAME,DownloadService,DIRECT
   - PROCESS-NAME,qBittorrent,DIRECT
@@ -573,7 +588,7 @@ rules:
   - DOMAIN,dl-a10b-0483.mypikpak.com,DIRECT
   - DOMAIN,dl-a10b-0484.mypikpak.com,DIRECT
   - DOMAIN-SUFFIX,mypikpak.com,🌐Clash
-  - DOMAIN-SUFFIX,mypikpak.net,🌐Clash
+  - DOMAIN-SUFFIX,mypikpak.net,🌐Clash  
   - RULE-SET,TestFlight,🔍TestFlight
   - RULE-SET,GoogleFCM,📟GoogleFCM
   - RULE-SET,Emby,🎬Emby
@@ -582,10 +597,12 @@ rules:
   - RULE-SET,Telegram,📱Telegram
   - RULE-SET,Google,🌐Google
   - RULE-SET,Microsoft,🪟Microsoft
+  - RULE-SET,Twitter,🌐Clash
+  - RULE-SET,Facebook,🌐Clash
+  - RULE-SET,iCloud,🍎☁️iCloud
   - RULE-SET,ChinaMax,DIRECT
   - RULE-SET,ChinaMax_Domain,DIRECT
-  - RULE-SET,Global,🌐Clash
-  - RULE-SET,Global_Domain,🌐Clash
+  - RULE-SET,ChinaIP,DIRECT
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
@@ -595,5 +612,5 @@ rules:
   - IP-CIDR6,fc00::/7,DIRECT,no-resolve
   - IP-CIDR6,fe80::/10,DIRECT,no-resolve
   - IP-CIDR6,fd00::/8,DIRECT,no-resolve
-  - GEOIP,CN,DIRECT,no-reolvse
+  # - GEOIP,CN,DIRECT,no-reolvse
   - MATCH,💻Final
