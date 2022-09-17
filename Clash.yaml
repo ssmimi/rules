@@ -510,7 +510,7 @@ rule-providers:
     
   ChinaIP:
     <<: *c
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ssmimi/rules/main/Stash/China/ChinaIP.yaml"
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/ssmimi/Clash-Rules/main/China-IP.txt"
     path: ./rule_providers/ChinaIP.yaml    
 
   Privacy:
