@@ -508,10 +508,12 @@ rule-providers:
     url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaMax/ChinaMax.yaml"
     path: ./rule_providers/ChinaMax.yaml
     
-  ChinaIP:
-    <<: *c
-    url: "https://ghproxy.com/https://raw.githubusercontent.com/ssmimi/Clash-Rules/main/China-IP.txt"
-    path: ./rule_providers/ChinaIP.yaml    
+  ChinaIPS_IP:
+    type: http
+    behavior: ipcidr
+    url: "https://ghproxy.com/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/ChinaIPs/ChinaIPs_IP.yaml"
+    path: ./profiles/rules/ChinaIPS_IP.yaml
+    interval: 86400   
 
   Privacy:
     <<: *c
@@ -602,7 +604,7 @@ rules:
   - RULE-SET,iCloud,🍎☁️iCloud
   - RULE-SET,ChinaMax,DIRECT
   - RULE-SET,ChinaMax_Domain,DIRECT
-  - RULE-SET,ChinaIP,DIRECT
+  - RULE-SET,ChinaIPS_IP,DIRECT,no-reolvse
   - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
   - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
   - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
