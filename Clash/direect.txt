@@ -1,4 +1,6 @@
-payload:  
+#引用 blackmatrix7  Loyalsoldier 大佬的库,感谢
+# REPO: https://github.com/blackmatrix7/ios_rule_script ,  https://github.com/Loyalsoldier
+payload:
   - DOMAIN-KEYWORD,-cn
   - DOMAIN-KEYWORD,taobao
   - DOMAIN-KEYWORD,tmall 
