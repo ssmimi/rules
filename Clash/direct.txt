@@ -2,6 +2,7 @@
 # REPO: https://github.com/blackmatrix7/ios_rule_script ,  https://github.com/Loyalsoldier
 payload:
   - DOMAIN-SUFFIX,cn
+  - DOMAIN-KEYWORD,-cn
   - DOMAIN-KEYWORD,taobao
   - DOMAIN-KEYWORD,qq
   - DOMAIN-KEYWORD,tencent
