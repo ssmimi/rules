@@ -1,4 +1,6 @@
 #补充修正直连
 payload:
+  - DOMAIN,dl.google.com
+  - DOMAIN,dl.l.google.com 
   - DOMAIN,edge.microsoft.com
   
