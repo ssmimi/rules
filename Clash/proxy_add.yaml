@@ -1,6 +1,6 @@
 #补充修正代理
 payload:
-  DOMAIN,mtalk.google.com
-  DOMAIN,translate.google.com
-  DOMAIN,access.mypikpak.com
+  - DOMAIN,mtalk.google.com
+  - DOMAIN,translate.google.com
+  - DOMAIN,access.mypikpak.com
   
