@@ -1,4 +1,4 @@
 #补充修正直连
 payload:
-  DOMAIN,edge.microsoft.com
+  - DOMAIN,edge.microsoft.com
   
