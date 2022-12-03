@@ -1,1 +1,10 @@
-
+# >补充修正直连:
+DOMAIN-SUFFIX,bitwarden.com
+DOMAIN-KEYWORD,1password
+DOMAIN,dl.google.com
+DOMAIN,dl.l.google.com
+DOMAIN,edge.microsoft.com
+DOMAIN-SUFFIX,live.com
+DOMAIN-SUFFIX,office.com
+DOMAIN-SUFFIX,office365.com  
+DOMAIN,self.events.data.microsoft.com
