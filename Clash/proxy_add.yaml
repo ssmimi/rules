@@ -4,4 +4,4 @@ payload:
   - DOMAIN,translate.google.com
   - DOMAIN,access.mypikpak.com
   - DOMAIN,onedrive.live.com
-  
+  - DOMAIN,services.googleapis.cn
