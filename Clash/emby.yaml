@@ -44,6 +44,7 @@ payload:
   - DOMAIN-KEYWORD,emby.wtf
   - DOMAIN-KEYWORD,jmsooo
   - DOMAIN-KEYWORD,odysseyplus
-  - IP-CIDR,161.97.148.156/24,no-resolve
+  - IP-CIDR,161.97.148.156/24
   #自己补充
   - DOMAIN,tagemby.embylianmeng.com
+  - IP-CIDR,65.108.140.173/24
