@@ -2,3 +2,6 @@
 payload:
   - DOMAIN,ntb.lanjie100.com
   - DOMAIN,a-qmad.qm989.com
+  - DOMAIN,sdkconfig.ad.xiaomi.com
+  - DOMAIN-SUFFIX,ad.xiaomi.com
+  - DOMAIN-SUFFIX,ads-twitter.com
