@@ -6,3 +6,5 @@ payload:
   - DOMAIN,api.ad.xiaomi.com
   - DOMAIN-SUFFIX,ad.xiaomi.com
   - DOMAIN-SUFFIX,ads-twitter.com
+  # 钓鱼订阅转换
+  - DOMAIN,sub.105755.best
