@@ -1,0 +1,42 @@
+#参考 blackmatrix7 大佬规则
+# NAME: YouTube
+# AUTHOR: blackmatrix7
+# REPO: https://github.com/blackmatrix7/ios_rule_script
+# UPDATED: 2022-11-30 21:10:19
+# DOMAIN-KEYWORD: 1
+# DOMAIN-SUFFIX: 177
+# IP-CIDR: 2
+# IP-CIDR6: 1
+# TOTAL: 181
+payload:
+  - DOMAIN-SUFFIX,ggpht.cn
+  - DOMAIN-SUFFIX,ggpht.com
+  - DOMAIN-SUFFIX,googlevideo.com
+  - DOMAIN-SUFFIX,gvt1.com
+  - DOMAIN-SUFFIX,gvt2.com
+  - DOMAIN-SUFFIX,video.google.com
+  - DOMAIN-SUFFIX,withyoutube.com
+  - DOMAIN-SUFFIX,youtu.be
+  - DOMAIN-SUFFIX,youtube-nocookie.com
+  - DOMAIN-SUFFIX,youtube-ui.l.google.com
+  - DOMAIN-SUFFIX,youtube.googleapis.com
+  - DOMAIN-SUFFIX,youtubeeducation.com
+  - DOMAIN-SUFFIX,youtubeembeddedplayer.googleapis.com
+  - DOMAIN-SUFFIX,youtubefanfest.com
+  - DOMAIN-SUFFIX,youtubegaming.com
+  - DOMAIN-SUFFIX,youtubei.googleapis.com
+  - DOMAIN-SUFFIX,youtubekids.com
+  - DOMAIN-SUFFIX,youtubemobilesupport.com
+  - DOMAIN-SUFFIX,yt.be
+  - DOMAIN-SUFFIX,ytimg.com
+  - DOMAIN-SUFFIX,youtubekids.com
+  - DOMAIN-KEYWORD,youtube
+  - DOMAIN-KEYWORD,youtubego
+  - IP-CIDR,172.110.32.0/21
+  - IP-CIDR,216.73.80.0/20
+  - IP-CIDR6,2620:120:e000::/40
+  # 补充 泥巴影院
+  - DOMAIN-SUFFIX,novid.tv
+  - DOMAIN-SUFFIX,biggggg.com
+  - DOMAIN-SUFFIX,newpppp.com
+  - DOMAIN-SUFFIX,mudvod.tv
