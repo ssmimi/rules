@@ -41,4 +41,4 @@ payload:
   - DOMAIN-SUFFIX,newpppp.com
   - DOMAIN-SUFFIX,mudvod.tv
   - DOMAIN-SUFFIX,nbys1.tv
-  - PROCESS NAME,com.mudvod.video
+  - PROCESS-NAME,com.mudvod.video
