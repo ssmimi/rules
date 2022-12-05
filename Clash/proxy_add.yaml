@@ -1,6 +1,7 @@
 #补充修正代理
 payload:
   - PROCESS-NAME,org.telegram.messenger
+  - PROCESS-NAME,com.google.android.apps.googlevoice
   - PROCESS-NAME,com.twitter.android
   - PROCESS-NAME,Telegram.exe  
   - DOMAIN,mtalk.google.com
