@@ -1,13 +1,6 @@
 #参考 blackmatrix7 大佬规则
-# NAME: YouTube
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
-# UPDATED: 2022-11-30 21:10:19
-# DOMAIN-KEYWORD: 1
-# DOMAIN-SUFFIX: 177
-# IP-CIDR: 2
-# IP-CIDR6: 1
-# TOTAL: 181
 payload:
   - DOMAIN-SUFFIX,ggpht.cn
   - DOMAIN-SUFFIX,ggpht.com
