@@ -6,6 +6,7 @@ payload:
   - DOMAIN,dl.l.google.com
   - DOMAIN,edge.microsoft.com
   - DOMAIN-SUFFIX,office.com
+  - DOMAIN,officeapps.live.com
   - DOMAIN-SUFFIX,office365.com  
   - DOMAIN,self.events.data.microsoft.com
   - DOMAIN,bn02pap001.storage.live.com
