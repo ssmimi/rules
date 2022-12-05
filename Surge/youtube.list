@@ -30,5 +30,8 @@ USER-AGENT,*youtube*
 USER-AGENT,YouTube*
 USER-AGENT,com.google.ios.youtube*#
 #补充 泥巴影视
-
-https://www.nbys1.tv/
+DOMAIN-SUFFIX,novid.tv
+DOMAIN-SUFFIX,biggggg.com
+DOMAIN-SUFFIX,newpppp.com
+DOMAIN-SUFFIX,mudvod.tv
+DOMAIN-SUFFIX,nbys1.tv
