@@ -28,5 +28,6 @@ payload:
   - PROCESS-NAME,com.qiyi.video
   - PROCESS-NAM,iQIYI.exe
   - PROCESS-NAME,QQLive.exe
+  - PROCESS-NAME,QQLivePlayerHD.exe
   - PROCESS-NAME,avp.exe
   - DOMAIN,clash.razord.top
