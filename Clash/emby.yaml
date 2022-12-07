@@ -44,3 +44,4 @@ payload:
   - DOMAIN,tagemby.embylianmeng.com
   - DOMAIN-SUFFIX,embylianmeng.com
   - DOMAIN-SUFFIX,nebula-emby.com
+  - IP-CIDR,65.108.140.173/24
