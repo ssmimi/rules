@@ -26,7 +26,7 @@ payload:
   - PROCESS-NAME,com.xiaomi.mibrain.speech
   - PROCESS-NAME,小米云服务.exe
   - PROCESS-NAME,com.qiyi.video
-  - PROCESS-NAM,iQIYI.exe
+  - PROCESS-NAME,iQIYI.exe
   - PROCESS-NAME,QQLive.exe
   - PROCESS-NAME,QQLivePlayerHD.exe
   - PROCESS-NAME,avp.exe
