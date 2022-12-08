@@ -38,7 +38,6 @@ DOMAIN-SUFFIX,servers.xeton.dev
 DOMAIN-KEYWORD,emby.wtf
 DOMAIN-KEYWORD,jmsooo
 DOMAIN-KEYWORD,odysseyplus
-IP-CIDR,161.97.148.156/24
 #自己补充
 DOMAIN,tagemby.embylianmeng.com
 DOMAIN-SUFFIX,embylianmeng.com
