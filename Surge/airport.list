@@ -1,9 +1,27 @@
-DOMAIN,api.nxtlnodes.com
-DOMAIN,config.51catss.com
+# 机场
+# Amy
+DOMAIN-SUFFIX,amytele.com
+DOMAIN-SUFFIX,amysecure.com
+# YTOO
+DOMAIN-SUFFIX,ytoo.cz
+DOMAIN-SUFFIX,oxycontin.top
+DOMAIN-SUFFIX,stentvessel.shop
+DOMAIN-SUFFIX,to-ytoo.xyz
+# FlowerCloud
+DOMAIN-SUFFIX,flower.yt
+# V2Tun
+DOMAIN,cp.v2tun.us
+# TAG
+DOMAIN-SUFFIX,tagss.pro
+# CordCloud
+DOMAIN-SUFFIX,cordc.xyz
+DOMAIN-SUFFIX,c-cloud.xyz
+#Catnet
+DOMAIN-SUFFIX,51catss.com
+
 DOMAIN,api.flowercloud.xyz
 DOMAIN,uuu.glass
 DOMAIN,www.ccsub.online
-DOMAIN,api.oxycontin.cc
-DOMAIN,dove.589669.xyz
+
 DOMAIN,nexconvert.com
 DOMAIN,sublink.dev
