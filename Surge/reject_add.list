@@ -7,3 +7,5 @@ DOMAIN-SUFFIX,ad.xiaomi.com
 DOMAIN-SUFFIX,ads-twitter.com
 # 钓鱼订阅转换
 DOMAIN,sub.105755.best
+# 已弃用机场网址
+DOMAIN-SUFFIX,tagvpn.vip
