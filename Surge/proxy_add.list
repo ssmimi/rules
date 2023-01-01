@@ -4,6 +4,7 @@ DOMAIN,translate.google.com
 DOMAIN,access.mypikpak.com
 DOMAIN,onedrive.live.com
 DOMAIN,services.googleapis.cn
+DOMAIN-SUFFIX,getsurfboard.com
 # 机场
 # Amy
 DOMAIN-SUFFIX,amytele.com
