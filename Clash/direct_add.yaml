@@ -10,6 +10,7 @@ payload:
   - PROCESS-NAME,QQLivePlayerHD.exe
   - PROCESS-NAME,avp.exe
   - DOMAIN,s14.upd.kaspersky.com
+  - DOMAIN,bsem.ddns.me
   - DOMAIN,dl.google.com
   - DOMAIN,dl.l.google.com
   - DOMAIN,update.googleapis.com
