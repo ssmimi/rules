@@ -10,7 +10,6 @@ payload:
   - PROCESS-NAME,QQLivePlayerHD.exe
   - PROCESS-NAME,avp.exe
   - DOMAIN,s14.upd.kaspersky.com
-  - DOMAIN,bsem.ddns.me
   - DOMAIN,dl.google.com
   - DOMAIN,dl.l.google.com
   - DOMAIN,update.googleapis.com
@@ -22,4 +21,7 @@ payload:
   - DOMAIN-SUFFIX,office365.com  
   - DOMAIN-SUFFIX,bitwarden.com
   - DOMAIN-KEYWORD,1password
+  # Emby
+  - DOMAIN,bsem.ddns.me
+  - DOMAIN-SUFFIX,nebula-emby.com
   - IP-CIDR,212.90.120.164
