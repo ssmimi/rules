@@ -26,3 +26,5 @@ payload:
   - DOMAIN-SUFFIX,nebula-emby.com
   - DOMAIN-SUFFIX,misakaf.org
   - IP-CIDR,212.90.120.164
+  # Sync
+  - PROCESS-NAME,Resilio Sync.exe
