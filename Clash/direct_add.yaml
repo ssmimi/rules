@@ -4,6 +4,7 @@ payload:
   - PROCESS-NAME,com.jjwxc.reader
   - PROCESS-NAME,com.xiaomi.mibrain.speech
   - PROCESS-NAME,小米云服务.exe
+  - PROCESS-NAMEaDrive.exe
   - PROCESS-NAME,com.qiyi.video
   - PROCESS-NAME,iQIYI.exe
   - PROCESS-NAME,QQLive.exe
