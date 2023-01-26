@@ -11,3 +11,10 @@ DOMAIN-SUFFIX,bitwarden.com
 DOMAIN-SUFFIX,office.com
 DOMAIN-SUFFIX,office365.com  
 DOMAIN-KEYWORD,1password
+# Emby
+DOMAIN,bsem.ddns.me
+DOMAIN-SUFFIX,nebula-emby.com
+DOMAIN-SUFFIX,misakaf.org
+IP-CIDR,212.90.120.164
+# Sync
+PROCESS-NAME,Resilio Sync.exe
