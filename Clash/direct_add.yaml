@@ -28,5 +28,6 @@ payload:
   - DOMAIN,bsem.ddns.me
   - DOMAIN-SUFFIX,nebula-emby.com
   - DOMAIN-SUFFIX,misakaf.org
+  - DOMAIN,kr.embymv.tk
   # Sync
   - PROCESS-NAME,Resilio Sync.exe
