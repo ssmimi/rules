@@ -1,5 +1,6 @@
 #补充修正直连
 payload:
+  - DOMAIN-SUFFIX,cn
   - PROCESS-NAME,com.zhiliaoapp.musically
   - PROCESS-NAME,com.jjwxc.reader
   - PROCESS-NAME,com.xiaomi.mibrain.speech
