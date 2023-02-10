@@ -26,9 +26,6 @@ payload:
   - DOMAIN-SUFFIX,youtubekids.com
   - DOMAIN-KEYWORD,youtube
   - DOMAIN-KEYWORD,youtubego
-  - IP-CIDR,172.110.32.0/21
-  - IP-CIDR,216.73.80.0/20
-  - IP-CIDR6,2620:120:e000::/40
   # 补充 泥巴影院
   - DOMAIN-SUFFIX,novid.tv
   - DOMAIN-SUFFIX,biggggg.com
