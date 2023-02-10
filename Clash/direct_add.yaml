@@ -26,8 +26,11 @@ payload:
   - DOMAIN-KEYWORD,1password
   # Emby
   - DOMAIN,bsem.ddns.me
-  - DOMAIN-SUFFIX,nebula-emby.com
-  - DOMAIN-SUFFIX,misakaf.org
   - DOMAIN,kr.embymv.tk
+  - DOMAIN,direct.nebula-emby.com
+  - DOMAIN-SUFFIX,misakaf.org
+  - DOMAIN-SUFFIX,jmsooo.com
+  - DOMAIN-SUFFIX,emby.wtf
+  
   # Sync
   - PROCESS-NAME,Resilio Sync.exe
