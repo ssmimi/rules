@@ -53,7 +53,6 @@ DOMAIN-SUFFIX,sublink.dev
 DOMAIN,bsem.ddns.me
 DOMAIN-SUFFIX,nebula-emby.com
 DOMAIN-SUFFIX,misakaf.org
-IP-CIDR,212.90.120.164/24
 # Sync
 PROCESS-NAME,Resilio Sync.exe
 DOMAIN-SUFFIX,icloud-content.com
