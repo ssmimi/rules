@@ -13,12 +13,4 @@ DOMAIN-KEYWORD,qiyi
 DOMAIN-KEYWORD,iqiyipic
 DOMAIN-KEYWORD,weibo
 DOMAIN-KEYWORD,zhihu
-PROCESS-NAME,com.zhiliaoapp.musically
-PROCESS-NAME,com.jjwxc.reader
-PROCESS-NAME,com.xiaomi.mibrain.speech
-PROCESS-NAME,小米云服务.exe
-PROCESS-NAME,com.qiyi.video
-PROCESS-NAM,iQIYI.exe
-PROCESS-NAME,QQLive.exe
-PROCESS-NAME,avp.exe
-DOMAIN,clash.razord.top
+
