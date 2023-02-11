@@ -1,6 +1,7 @@
 # 参考 blackmatrix7 大佬规则
 # AUTHOR: blackmatrix7
 # REPO: https://github.com/blackmatrix7/ios_rule_script
+#YouTube
 DOMAIN-SUFFIX,ggpht.cn
 DOMAIN-SUFFIX,ggpht.com
 DOMAIN-SUFFIX,googlevideo.com
@@ -23,12 +24,6 @@ DOMAIN-SUFFIX,yt.be
 DOMAIN-SUFFIX,ytimg.com
 DOMAIN-KEYWORD,youtube
 DOMAIN-KEYWORD,youtubego
-IP-CIDR,172.110.32.0/21,no-resolve
-IP-CIDR,216.73.80.0/20,no-resolve
-IP-CIDR6,2620:120:e000::/40,no-resolve
-USER-AGENT,*youtube*
-USER-AGENT,YouTube*
-USER-AGENT,com.google.ios.youtube*#
 #补充 泥巴影视
 DOMAIN-SUFFIX,novid.tv
 DOMAIN-SUFFIX,nivod.tv
