@@ -63,7 +63,7 @@ payload:
   - DOMAIN,direct.nebula-emby.com
   - DOMAIN-SUFFIX,misakaf.org
   - DOMAIN-SUFFIX,jmsooo.com
-  - DOMAIN-SUFFIX,emby.wtf
-  
+  - DOMAIN-SUFFIX,emby.wtf  
   # Sync
   - PROCESS-NAME,Resilio Sync.exe
+  - DOMAIN-SUFFIX,icloud-content.com
