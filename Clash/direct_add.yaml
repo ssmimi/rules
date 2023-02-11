@@ -1,8 +1,5 @@
 #补充修正直连
 payload:
-  - DOMAIN-SUFFIX,cn
-  - PROCESS-NAME,com.zhiliaoapp.musically
-  - PROCESS-NAME,com.jjwxc.reader
   - PROCESS-NAME,com.xiaomi.mibrain.speech
   - PROCESS-NAME,小米云服务.exe
   - PROCESS-NAME,aDrive.exe
