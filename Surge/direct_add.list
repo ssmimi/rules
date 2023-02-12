@@ -1,57 +1,62 @@
-# >补充修正直连:
-PROCESS-NAME,com.xiaomi.mibrain.speech
-PROCESS-NAME,小米云服务.exe
-PROCESS-NAME,aDrive.exe
-PROCESS-NAME,BaiduNetdiskHost.exe
-PROCESS-NAME,com.qiyi.video
-PROCESS-NAM,iQIYI.exe
-PROCESS-NAME,QQLive.exe
-PROCESS-NAME,QQLivePlayerHD.exe
-PROCESS-NAME,avp.exe
-DOMAIN,clash.razord.top
-DOMAIN,s14.upd.kaspersky.com
-DOMAIN,dl.google.com
-DOMAIN,dl.l.google.com
-DOMAIN,update.googleapis.com
-DOMAIN,edge.microsoft.com
-DOMAIN,officeapps.live.com
-DOMAIN,self.events.data.microsoft.com
-DOMAIN,bn02pap001.storage.live.com
-DOMAIN-SUFFIX,bitwarden.com
-DOMAIN-SUFFIX,office.com
-DOMAIN-SUFFIX,office365.com
-DOMAIN-SUFFIX,bitwarden.com
-DOMAIN-KEYWORD,1password
-# >机场
-DOMAIN,api.stentvessel.club
-DOMAIN,api.stentvessel.top
-DOMAIN,api.v2-163cdn.com
-DOMAIN,api.huacloud.xyz
-DOMAIN,xn--4gq62f52gdss.com
-DOMAIN,debian.51catss.com
-DOMAIN-SUFFIX,ytoo.cz
-DOMAIN-SUFFIX,oxycontin.top
-DOMAIN-SUFFIX,stentvessel.shop
-DOMAIN-SUFFIX,to-ytoo.xyz
-DOMAIN,cp.v2tun.us
-DOMAIN-SUFFIX,tagss.pro
-DOMAIN-SUFFIX,uuu.glass
-DOMAIN-SUFFIX,cordc.xyz
-DOMAIN-SUFFIX,c-cloud.xyz
-DOMAIN-SUFFIX,51catss.com
-# >订阅转换
-DOMAIN-SUFFIX,tagsssubscribe.com
-DOMAIN-SUFFIX,tagsub.net
-DOMAIN-SUFFIX,ccsub.online
-DOMAIN-SUFFIX,51catss.com
-DOMAIN-SUFFIX,dove.589669.xyz
-DOMAIN-SUFFIX,nameless13.com
-DOMAIN-SUFFIX,nexconvert.com
-DOMAIN-SUFFIX,sublink.dev
-# >Emby
-DOMAIN,bsem.ddns.me
-DOMAIN-SUFFIX,nebula-emby.com
-DOMAIN-SUFFIX,misakaf.org
-# >Sync
-PROCESS-NAME,Resilio Sync.exe
-DOMAIN-SUFFIX,icloud-content.com
+#补充修正直连
+payload:
+  - # >补充修正直连:
+  - PROCESS-NAME,com.xiaomi.mibrain.speech
+  - PROCESS-NAME,小米云服务.exe
+  - PROCESS-NAME,aDrive.exe
+  - PROCESS-NAME,BaiduNetdiskHost.exe
+  - PROCESS-NAME,com.qiyi.video
+  - PROCESS-NAME,iQIYI.exe
+  - PROCESS-NAME,QQLive.exe
+  - PROCESS-NAME,QQLivePlayerHD.exe
+  - PROCESS-NAME,avp.exe
+  - DOMAIN,clash.razord.top
+  - DOMAIN,s14.upd.kaspersky.com
+  - DOMAIN,dl.google.com
+  - DOMAIN,dl.l.google.com
+  - DOMAIN,update.googleapis.com
+  - DOMAIN,officeapps.live.com
+  - DOMAIN,self.events.data.microsoft.com
+  - DOMAIN,bn02pap001.storage.live.com
+  - DOMAIN-SUFFIX,bitwarden.com
+  - DOMAIN-SUFFIX,office.com
+  - DOMAIN-SUFFIX,office365.com
+  - DOMAIN-SUFFIX,bitwarden.com
+  - DOMAIN-SUFFIX,1password.com
+  - DOMAIN-SUFFIX,1password.eu
+  - DOMAIN-SUFFIX,1password.ca
+  - # >机场
+  - DOMAIN,api.stentvessel.club
+  - DOMAIN,api.v2-163cdn.com
+  - DOMAIN,api.oxycontin.cc
+  - DOMAIN,api.stentvessel.top
+  - DOMAIN,api.huacloud.xyz
+  - DOMAIN,api.flowercloud.xyz
+  - DOMAIN,xn--4gq62f52gdss.com
+  - DOMAIN,debian.51catss.com
+  - DOMAIN-SUFFIX,ytoo.cz
+  - DOMAIN-SUFFIX,oxycontin.top
+  - DOMAIN-SUFFIX,stentvessel.shop
+  - DOMAIN-SUFFIX,to-ytoo.xyz
+  - DOMAIN,cp.v2tun.us
+  - DOMAIN-SUFFIX,tagss.pro
+  - DOMAIN-SUFFIX,uuu.glass
+  - DOMAIN-SUFFIX,ccsub.online
+  - DOMAIN-SUFFIX,51catss.com
+  - DOMAIN-SUFFIX,tagsssubscribe.com
+  - DOMAIN-SUFFIX,tagcdnsub.com
+  - DOMAIN-SUFFIX,tagsub.net
+  - # >订阅转换
+  - DOMAIN-SUFFIX,dove.589669.xyz
+  - DOMAIN-SUFFIX,nameless13.com
+  - DOMAIN-SUFFIX,nexconvert.com
+  - DOMAIN-SUFFIX,sublink.dev
+  - # >Emby
+  - DOMAIN,bsem.ddns.me
+  - DOMAIN,kr.embymv.tk
+  - DOMAIN,direct.nebula-emby.com
+  - DOMAIN-SUFFIX,misakaf.org
+  - DOMAIN-SUFFIX,jmsooo.com
+  - DOMAIN-SUFFIX,emby.wtf
+  - # >Sync
+  - PROCESS-NAME,Resilio Sync.exe
