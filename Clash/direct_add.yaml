@@ -60,3 +60,4 @@ payload:
   - DOMAIN-SUFFIX,emby.wtf
   - # >Sync
   - PROCESS-NAME,Resilio Sync.exe
+  - 
