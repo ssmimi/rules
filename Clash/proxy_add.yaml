@@ -1,12 +1,5 @@
-#补充修正代理
 payload:
-  - PROCESS-NAME,org.telegram.messenger
-  - PROCESS-NAME,com.google.android.apps.googlevoice
-  - PROCESS-NAME,com.twitter.android
-  - PROCESS-NAME,Telegram.exe
-  - DOMAIN-SUFFIX,getsurfboard.com
-  - DOMAIN,mtalk.google.com
-  - DOMAIN,translate.google.com
-  - DOMAIN,access.mypikpak.com
-  - DOMAIN,onedrive.live.com
-  - DOMAIN,services.googleapis.cn
+# Google Play
+- PROCESS-NAME,com.android.vending
+# Telegram
+- PROCESS-NAME,Telegram.exe
