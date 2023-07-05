@@ -1,63 +1,58 @@
-#补充修正直连
 payload:
-  - # >补充修正直连:
-  - PROCESS-NAME,com.xiaomi.mibrain.speech
-  - PROCESS-NAME,小米云服务.exe
-  - PROCESS-NAME,aDrive.exe
-  - PROCESS-NAME,BaiduNetdiskHost.exe
-  - PROCESS-NAME,com.qiyi.video
-  - PROCESS-NAME,iQIYI.exe
-  - PROCESS-NAME,QQLive.exe
-  - PROCESS-NAME,QQLivePlayerHD.exe
-  - PROCESS-NAME,avp.exe
-  - DOMAIN,clash.razord.top
-  - DOMAIN,s14.upd.kaspersky.com
-  - DOMAIN,dl.google.com
-  - DOMAIN,dl.l.google.com
-  - DOMAIN,update.googleapis.com
-  - DOMAIN,officeapps.live.com
-  - DOMAIN,self.events.data.microsoft.com
-  - DOMAIN,bn02pap001.storage.live.com
-  - DOMAIN-SUFFIX,bitwarden.com
-  - DOMAIN-SUFFIX,office.com
-  - DOMAIN-SUFFIX,office365.com
-  - DOMAIN-SUFFIX,bitwarden.com
-  - DOMAIN-SUFFIX,1password.com
-  - DOMAIN-SUFFIX,1password.eu
-  - DOMAIN-SUFFIX,1password.ca
-  - # >机场
-  - DOMAIN,api.stentvessel.club
-  - DOMAIN,api.v2-163cdn.com
-  - DOMAIN,api.oxycontin.cc
-  - DOMAIN,api.stentvessel.top
-  - DOMAIN,api.huacloud.xyz
-  - DOMAIN,api.flowercloud.xyz
-  - DOMAIN,xn--4gq62f52gdss.com
-  - DOMAIN,debian.51catss.com
-  - DOMAIN-SUFFIX,ytoo.cz
-  - DOMAIN-SUFFIX,oxycontin.top
-  - DOMAIN-SUFFIX,stentvessel.shop
-  - DOMAIN-SUFFIX,to-ytoo.xyz
-  - DOMAIN,cp.v2tun.us
-  - DOMAIN-SUFFIX,tagss.pro
-  - DOMAIN-SUFFIX,uuu.glass
-  - DOMAIN-SUFFIX,ccsub.online
-  - DOMAIN-SUFFIX,51catss.com
-  - DOMAIN-SUFFIX,tagsssubscribe.com
-  - DOMAIN-SUFFIX,tagcdnsub.com
-  - DOMAIN-SUFFIX,tagsub.net
-  - # >订阅转换
-  - DOMAIN-SUFFIX,dove.589669.xyz
-  - DOMAIN-SUFFIX,nameless13.com
-  - DOMAIN-SUFFIX,nexconvert.com
-  - DOMAIN-SUFFIX,sublink.dev
-  - # >Emby
-  - DOMAIN,bsem.ddns.me
-  - DOMAIN,kr.embymv.tk
-  - DOMAIN,direct.nebula-emby.com
-  - DOMAIN-SUFFIX,misakaf.org
-  - DOMAIN-SUFFIX,jmsooo.com
-  - DOMAIN-SUFFIX,emby.wtf
-  - # >Sync
-  - PROCESS-NAME,Resilio Sync.exe
-  - 
+# Process name 规则
+- PROCESS-NAME,com.xiaomi.mibrain.speech
+- PROCESS-NAME,小米云服务.exe
+- PROCESS-NAME,Thunder.exe
+- PROCESS-NAME,aDrive.exe
+- PROCESS-NAME,BaiduNetdiskHost.exe
+- PROCESS-NAME,avp.exe
+- PROCESS-NAME,哔哩哔哩.exe
+# 爱奇艺
+- PROCESS-NAME,com.qiyi.video
+- PROCESS-NAME,QyClient.exe
+- PROCESS-NAME,QyFragment.exe
+- PROCESS-NAME,QyKernel.exe
+- PROCESS-NAME,QyX64Host.exe
+- PROCESS-NAME,QyPlayer.exe
+- PROCESS-NAME,iQIYI.exe
+# QQ
+- PROCESS-NAME,QQLive.exe
+- PROCESS-NAME,QQLiveService.exe
+- PROCESS-NAME,QQLivePlayerHD.exe
+- PROCESS-NAME,QQ.exe
+- PROCESS-NAME,TIM.exe
+# cf
+- PROCESS-NAME,TenioDL.exe
+- PROCESS-NAME,tcls_core.exe
+- PROCESS-NAME,wegame.exe
+- PROCESS-NAME,SGuardUpdate64.exe
+- PROCESS-NAME,crossfire.exe
+- PROCESS-NAME,GameLoader.exe
+- PROCESS-NAME,FeedBack.exe
+# Sync
+- PROCESS-NAME,Resilio Sync.exe
+- DOMAIN-KEYWORD,torrent
+- DOMAIN-KEYWORD,tracker
+- DOMAIN-KEYWORD,xunlei
+# emby
+# 桃子 peach
+- DOMAIN,kr.embymv.tk
+- DOMAIN,jp.embymv.tk
+- DOMAIN,us.embymv.tk
+- DOMAIN,embymv.tk
+- IP-CIDR,140.83.63.238/32,no-resolve
+# 橘子 orange
+- DOMAIN,cf.embytv.cf
+- DOMAIN,cdn.embytv.cf
+# MisakaF
+- DOMAIN,cdn.misakaf.org
+- DOMAIN-SUFFIX,misakaf.org
+# Studyfun
+- DOMAIN,cdn.studyfun.live
+- DOMAIN,stream.studyfun.live
+- DOMAIN,cdn1.studyfun.live
+- DOMAIN,stream1.studyfun.live
+# 星云 Nebula
+- DOMAIN,direct.nebula-emby.com
+# 纸片人
+- DOMAIN,embyplus.org
