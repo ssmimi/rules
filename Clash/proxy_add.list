@@ -1,0 +1,4 @@
+# Google Play
+PROCESS-NAME,com.android.vending
+# Telegram
+PROCESS-NAME,Telegram.exe

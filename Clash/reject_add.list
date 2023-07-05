@@ -1,0 +1,17 @@
+ # 补充修正阻止
+DOMAIN,ntb.lanjie100.com
+DOMAIN,a-qmad.qm989.com
+DOMAIN,a-remad.qm989.com
+DOMAIN,a-qmad.qimao.com
+DOMAIN,images.pinduoduo.com
+DOMAIN,h.trace.qq.com
+DOMAIN,mobads-pre-config,cdn.bcebos.com
+DOMAIN,sdkconfig.ad.xiaomi.com
+DOMAIN,api.ad.xiaomi.com
+DOMAIN-SUFFIX,ad.xiaomi.com
+DOMAIN-SUFFIX,ads-twitter.com
+# 钓鱼订阅转换
+DOMAIN,sub.105755.best
+# ad
+DOMAIN,ads.games.laohu.com
+DOMAIN-SUFFIX,sentry.io
