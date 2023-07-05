@@ -41,9 +41,6 @@ payload:
 - DOMAIN,us.embymv.tk
 - DOMAIN,embymv.tk
 - IP-CIDR,140.83.63.238/32,no-resolve
-# 橘子 orange
-- DOMAIN,cf.embytv.cf
-- DOMAIN,cdn.embytv.cf
 # MisakaF
 - DOMAIN,cdn.misakaf.org
 - DOMAIN-SUFFIX,misakaf.org
