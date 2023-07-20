@@ -53,33 +53,33 @@ DOMAIN,direct.nebula-emby.com
 # 纸片人
 DOMAIN,embyplus.org
 # V2Tun
-api.v2tun-163cdn.top
-api.stentvessel.club
+DOMAIN,api.v2tun-163cdn.top
+DOMAIN,api.stentvessel.club
 # 花云dev
-api.huacloud.xyz
+DOMAIN,api.huacloud.xyz
 # 库洛米
-kuromisubs.shop
+DOMAIN,kuromisubs.shop
 # YTOO
-api.oxycontin.cc
-api.stentvessel.top
+DOMAIN,api.oxycontin.cc
+DOMAIN,api.stentvessel.top
 # 一元
-xn--4gq62f52gdss.com
+DOMAIN,xn--4gq62f52gdss.com
 # CordCloud
-www.ccsub.online
+DOMAIN,www.ccsub.online
 # iQZone
-uuu.glass
+DOMAIN,uuu.glass
 # TAG
-tagcdnsub.work
-sub.tagsub.net
-support.tagsssubscribe.com
+DOMAIN,tagcdnsub.work
+DOMAIN,sub.tagsub.net
+DOMAIN,support.tagsssubscribe.com
 # 订阅转换
-+.dove.589669.xyz
-+.nameless13.com
-+.nexconvert.com
-+.sublink.dev
+DOMAIN-SUFFIX,dove.589669.xyz
+DOMAIN-SUFFIX,nameless13.com
+DOMAIN-SUFFIX,nexconvert.com
+DOMAIN-SUFFIX,sublink.dev
 # 域名
-upos-sz-mirrorcosov.bilivideo.com
-upos-hz-mirrorakam.akamaized.net
-clash.razord.top
-yacd.haishan.me
-yasd.royli.dev
+DOMAIN,upos-sz-mirrorcosov.bilivideo.com
+DOMAIN,upos-hz-mirrorakam.akamaized.net
+DOMAIN,clash.razord.top
+DOMAIN,yacd.haishan.me
+DOMAIN,yasd.royli.dev
