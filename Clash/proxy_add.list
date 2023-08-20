@@ -2,3 +2,8 @@
 PROCESS-NAME,com.android.vending
 # Telegram
 PROCESS-NAME,Telegram.exe
+# Studyfun
+DOMAIN,cdn.studyfun.live
+DOMAIN,stream.studyfun.live
+DOMAIN,cdn1.studyfun.live
+DOMAIN,stream1.studyfun.live
