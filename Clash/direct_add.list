@@ -43,11 +43,6 @@ IP-CIDR,140.83.63.238/32,no-resolve
 # MisakaF
 DOMAIN,cdn.misakaf.org
 DOMAIN-SUFFIX,misakaf.org
-# Studyfun
-DOMAIN,cdn.studyfun.live
-DOMAIN,stream.studyfun.live
-DOMAIN,cdn1.studyfun.live
-DOMAIN,stream1.studyfun.live
 # 星云 Nebula
 DOMAIN,direct.nebula-emby.com
 # 纸片人
