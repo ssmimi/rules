@@ -43,8 +43,6 @@ IP-CIDR,140.83.63.238/32,no-resolve
 # MisakaF
 DOMAIN,cdn.misakaf.org
 DOMAIN-SUFFIX,misakaf.org
-# 星云 Nebula
-DOMAIN,direct.nebula-emby.com
 # 纸片人
 DOMAIN,embyplus.org
 # V2Tun
@@ -54,19 +52,6 @@ DOMAIN,api.stentvessel.club
 DOMAIN,api.huacloud.xyz
 # 库洛米
 DOMAIN,kuromisubs.shop
-# YTOO
-DOMAIN,api.oxycontin.cc
-DOMAIN,api.stentvessel.top
-# 一元
-DOMAIN,xn--4gq62f52gdss.com
-# CordCloud
-DOMAIN,www.ccsub.online
-# iQZone
-DOMAIN,uuu.glass
-# TAG
-DOMAIN,tagcdnsub.work
-DOMAIN,sub.tagsub.net
-DOMAIN,support.tagsssubscribe.com
 # 订阅转换
 DOMAIN-SUFFIX,dove.589669.xyz
 DOMAIN-SUFFIX,nameless13.com
